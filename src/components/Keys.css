@@ -1,8 +1,8 @@
 button {
-  box-sizing: border-box;
-  border: 1px solid black;
-  padding: 20px;
-  border-radius: 5px;
-  font-size: 22px;
-  cursor: pointer;
+  width: 4.2rem;
+  height: 4.2rem;
+  margin: 0.4rem;
+  text-align: center;
+  font-size: 150%;
+  border-radius: 15px;
 }

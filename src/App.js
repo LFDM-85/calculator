@@ -1,14 +1,8 @@
-import "./App.css";
-import Calculator from "./Calculator";
-import Display from "./components/Display";
-import Keypad from "./components/Keypad";
+import React from "react";
+import Calculator from "./components/Calculator";
 
 function App() {
-  return (
-    <div className="App">
-      <Calculator />
-    </div>
-  );
+  return <Calculator />;
 }
 
 export default App;

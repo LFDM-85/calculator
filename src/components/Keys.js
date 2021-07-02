@@ -1,29 +1,15 @@
+import React from "react";
 import "./Keys.css";
 
-const Keys = () => {
-  const keys = [
-    "0",
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    ".",
-    "+",
-    "-",
-    "*",
-    "/",
-    "clear",
-    "=",
-  ];
-
-  return keys.map((val) => {
-    return <button>{val}</button>;
-  });
-};
+function Keys(props) {
+  return (
+    <button
+      className={`${props.className}`}
+      onClick={() => props.onClick(props.keyValue)}
+    >
+      {props.keyValue}{" "}
+    </button>
+  );
+}
 
 export default Keys;
