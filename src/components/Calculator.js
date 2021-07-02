@@ -46,7 +46,7 @@ function Calculator() {
     setNextValue(parseFloat(nextValue) * -1);
   };
   const clearData = () => {
-    setNextValue("0");
+    setNextValue(0);
     setPrevValue(0);
   };
 
