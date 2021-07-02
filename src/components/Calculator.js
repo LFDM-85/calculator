@@ -76,6 +76,15 @@ function Calculator() {
     }
   };
 
+  // -------------------------------------------
+  const arraynum = ["9", "8", "7", "6", "5", "4", "3", "2", "1"];
+
+  const arraysymb = ["+", "-", "*", "/", "="];
+
+  const arrayfunc = ["c", "\xB1", "%"];
+
+  // -------------------------------------------
+
   return (
     <div className="calculator">
       <div className="calculator-input">
@@ -83,27 +92,20 @@ function Calculator() {
       </div>
       <div className="calculator-keypad">
         <div className="keys-function">
-          <Keys keyValue={"c"} onClick={handleOperation} />
-          <Keys keyValue={"\xB1"} onClick={handleOperation} />
-          <Keys keyValue={"%"} onClick={handleOperation} />
+          {arrayfunc.map((val) => (
+            <Keys keyValue={val} onClick={handleOperation} />
+          ))}
         </div>
         <div className="keys-operators">
-          <Keys keyValue={"+"} onClick={handleOperation} />
-          <Keys keyValue={"-"} onClick={handleOperation} />
-          <Keys keyValue={"*"} onClick={handleOperation} />
-          <Keys keyValue={"/"} onClick={handleOperation} />
-          <Keys keyValue={"="} onClick={handleOperation} />
+          {arraysymb.map((val) => (
+            <Keys keyValue={val} onClick={handleOperation} />
+          ))}
         </div>
         <div className="keys-numbers">
-          <Keys keyValue={9} onClick={handleOperation} />
-          <Keys keyValue={8} onClick={handleOperation} />
-          <Keys keyValue={7} onClick={handleOperation} />
-          <Keys keyValue={6} onClick={handleOperation} />
-          <Keys keyValue={5} onClick={handleOperation} />
-          <Keys keyValue={4} onClick={handleOperation} />
-          <Keys keyValue={3} onClick={handleOperation} />
-          <Keys keyValue={2} onClick={handleOperation} />
-          <Keys keyValue={1} onClick={handleOperation} />
+          {arraynum.map((val) => (
+            <Keys keyValue={val} onClick={handleOperation} />
+          ))}
+
           <Keys className="key-dot" keyValue={"."} onClick={handleOperation} />
           <Keys className="key-zero" keyValue={0} onClick={handleOperation} />
         </div>
