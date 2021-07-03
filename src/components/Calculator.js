@@ -92,18 +92,18 @@ function Calculator() {
       </div>
       <div className="calculator-keypad">
         <div className="keys-function">
-          {arrayfunc.map((val) => (
-            <Keys keyValue={val} onClick={handleOperation} />
+          {arrayfunc.map((func) => (
+            <Keys key={func} keyValue={func} onClick={handleOperation} />
           ))}
         </div>
         <div className="keys-operators">
-          {arraysymb.map((val) => (
-            <Keys keyValue={val} onClick={handleOperation} />
+          {arraysymb.map((symb) => (
+            <Keys key={symb} keyValue={symb} onClick={handleOperation} />
           ))}
         </div>
         <div className="keys-numbers">
-          {arraynum.map((val) => (
-            <Keys keyValue={val} onClick={handleOperation} />
+          {arraynum.map((num) => (
+            <Keys key={num} keyValue={num} onClick={handleOperation} />
           ))}
 
           <Keys className="key-dot" keyValue={"."} onClick={handleOperation} />
